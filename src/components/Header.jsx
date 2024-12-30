@@ -1,4 +1,4 @@
-import { useState, useLocation } from "react";
+import { useState,} from "react";
 import React from "react";
 import '../App.css'
 import Dropdown from "react-bootstrap/Dropdown";
@@ -11,12 +11,12 @@ function Header() {
         setIsMenuOpen(!isMenuOpen);
     }
     const getLinkStyle = (path) => {
-        return location.pathname === path ? "text-[red] font-bold decoration-transparent hover:text-[red]" : "text-white decoration-transparent"; //
+        return location.pathname === path ? "text-orange-500 font-bold decoration-transparent " : "text-white decoration-transparent"; //
     };
 
     return (
         <div>
-            <div className="flex items-center justify-center w-full h-16 gap-[1%] bg-black text-white ">
+            <div className="flex items-center justify-center w-full h-16 gap-[1%] bg-black bg-opacity-60 text-whited ">
                 <div className="h-full w-[60%] md:w-[30%] flex gap-[5%] justify-center">
                     <div className="w-[0] md:w-[10%] h-full flex items-center justify-center ">
                         <div className="flex md:hidden" onClick={toggleMenu}>
@@ -53,7 +53,7 @@ function Header() {
                         <li>
                             <button className="font-bold">
                                 <Link to="/animation" className={getLinkStyle("/animation")}>
-                                    Animation
+                                    Feedback
                                 </Link>
                             </button>
                        
@@ -105,13 +105,13 @@ function Header() {
 
                 <div className="h-full w-[35%] md:w-[30%] flex items-center justify-center">
                     <div className="h-[80%] w-[100%] md:w-[80%] flex justify-end items-center gap-3">
-                        <button>
-                            <i class="fa-solid fa-magnifying-glass"></i>
+                        <button className="text-white">
+                            <i className="fa-solid fa-magnifying-glass"></i>
                         </button>
-                        <button>
-                            <i class="fa-solid fa-user"></i>
+                        <button className="text-white">
+                            <i className="fa-solid fa-user"></i>
                         </button>
-                        <button className="text-xs text-white hover:text-red-600 md:text-base">Sign In</button>
+                        <button className="text-xs text-white border-2 border-orange-500 w-[40%] hover:text-red-600 md:text-base rounded-full">Sign In</button>
                     </div>
                 </div>
             </div>
@@ -138,7 +138,7 @@ function Header() {
                                 <li>
                                     <button className="font-bold">
                                         <Link to="/animation" className={getLinkStyle("/animation")}>
-                                            Animation
+                                            Feedback
                                         </Link>
                                     </button>
                                 </li>
@@ -167,7 +167,7 @@ function Header() {
                                         <Dropdown.Toggle className="text-white bg-transparent border-0" id="dropdown-basic">
                                             LAG
                                         </Dropdown.Toggle>
-                                        <Dropdown.Menu className="h-[200px] overflow-scroll">
+                                        <Dropdown.Menu className="h-[200px] overflow-y-auto scrollbar-hide scroll-container">
                                             <Dropdown.Item href="#/action-1">മലയാളം</Dropdown.Item>
                                             <Dropdown.Item href="#/action-2">हिन्दी</Dropdown.Item>
                                             <Dropdown.Item href="#/action-3">தமிழ்</Dropdown.Item>

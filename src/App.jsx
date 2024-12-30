@@ -4,6 +4,7 @@ import './App.css'
 import Movies from './pages/Movies'
 import Home from './pages/Home'
 import Anime from './pages/Anime';
+import axios from 'axios';
 
 function App() {
   
@@ -23,7 +24,17 @@ function App() {
     </Router>
      
     </>
+    
   )
 }
 
 export default App
+
+
+
+
+{/* <button onClick={() => {
+      axios.get('https://jsonplaceholder.typicode.com/posts').then((Response) => {console.log(Response.data)});
+    }}>
+    click
+    </button> */}

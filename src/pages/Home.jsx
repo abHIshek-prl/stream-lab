@@ -1,15 +1,18 @@
-import React from 'react'
-import Header from '../components/Header'
-import Footr from '../components/Footr'
+import React from "react";
+import Header from "../components/Header";
+import Footr from "../components/Footr";
+import BannerH from "../components/BannerH";
 
 function Home() {
-  return (
-    <div>
-        <Header/>
-      <p>home page Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis nostrum incidunt dolorum aliquam repellat facilis doloremque. Autem doloribus cupiditate dolores repudiandae, velit voluptatibus eligendi commodi expedita dolor ea natus quos quae repellendus rerum alias voluptas eveniet dolorum debitis harum laboriosam.</p>
-       <Footr/>
-    </div>
-  )
+    return (
+        <div>
+            <Header />
+
+            <BannerH/>
+
+            <Footr />
+        </div>
+    );
 }
 
-export default Home
+export default Home;
