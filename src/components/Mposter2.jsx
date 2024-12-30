@@ -16,7 +16,7 @@ function Mposter(props) {
             try {
                 const response = await axios.get(props.url);
                 console.log("Fetched movie data:", response.data.results);
-                setMovie(response.data.results || [])
+                setMovie(response.data.results || []);
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
@@ -100,11 +100,9 @@ function Mposter(props) {
                     </div>
                 </div>
             </div>
-            <div className="bg-black">
-                {urlid ? (
-                    <YouTube videoId={urlid} opts={opts} className="bg-black"/>
-                ) : (
-                   <p className="bg-black"></p>
+            <div className={`bg-black ${urlid ? "h-auto py-4" : "h-0"}`}>
+                {urlid && (
+                    <YouTube videoId={urlid} opts={opts} className="w-full mx-auto" />
                 )}
             </div>
         </>

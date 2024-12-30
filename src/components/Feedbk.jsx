@@ -9,9 +9,12 @@ function FeedbackPage() {
     };
 
     return (
+        <>
+        <div className="w-full h-10 bg-black"></div>
+        
         <div className="flex flex-col items-center justify-between w-full min-h-screen text-white bg-black">
             <header className="w-full py-8 bg-black shadow-lg">
-                <h1 className="text-5xl font-extrabold text-center text-transparent uppercase bg-clip-text bg-gradient-to-r from-black to-orange-600">
+                <h1 className="text-5xl font-extrabold text-center text-transparent uppercase bg-clip-text bg-gradient-to-r from-black via-orange-600 to-black">
                     Feedback Form
                 </h1>
                 <p className="mt-2 text-center text-gray-400">
@@ -30,14 +33,12 @@ function FeedbackPage() {
                             type="text"
                             placeholder="Your Name"
                             className="w-full px-4 py-3 text-gray-800 bg-gray-100 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-orange-600"
-                            required
-                        />
+                            required />
                         <input
                             type="email"
                             placeholder="Your Email"
                             className="w-full px-4 py-3 text-gray-800 bg-gray-100 rounded-lg shadow-md focus:outline-none focus:ring-2 focus:ring-orange-600"
-                            required
-                        />
+                            required />
                         <textarea
                             placeholder="Your Feedback"
                             rows="4"
@@ -74,7 +75,7 @@ function FeedbackPage() {
                     </div>
                 )}
             </main>
-        </div>
+        </div></>
     );
 }
 

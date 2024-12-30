@@ -1,6 +1,7 @@
 import React from "react";
 
-import Welcome from "../assets/home-1.png";
+import Welcome from "../assets/home2.png";
+import Welcome2 from "../assets/home3.png";
 
 function BannerH() {
     return (
@@ -29,7 +30,7 @@ function BannerH() {
 
                 <div
                     className="relative flex items-center min-h-screen bg-center bg-cover"
-                    style={{ backgroundImage: `url(${Welcome})` }}
+                    style={{ backgroundImage: `url(${Welcome2})` }}
                 >
                     <div className="absolute inset-0 bg-black opacity-60"></div>
 
