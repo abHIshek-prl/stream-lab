@@ -54,6 +54,10 @@ function Mposter(props) {
 
     const Trail = async (id) => {
         console.log("Fetching trailer for movie ID:", id);
+
+        
+        setUrlId("");
+
         try {
             const response = await axios.get(`movie/${id}/videos?api_key=${API_KEY}`);
             const trailer = response.data.results.find(
